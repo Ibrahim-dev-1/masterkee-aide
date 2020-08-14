@@ -6,10 +6,57 @@
 }
 
 body{
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.4rem;
 }
 
 a{
     color: rgba(0, 0, 0, 0.74);
+    text-decoration: none;
 }
+
+li.kratosItem{
+    transition: all 0.4s ease-in-out; 
+}
+li.kratosItem a{
+    text-decoration: none;
+}
+
+li.kratosItem:hover{
+    background : rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transform: translate3d(2px,2px,2px);
+}
+
+.kratosMenu{
+    position: fixed;
+    left: 50px;
+    height: 500px;
+    top: 150px;
+    width: 220px;
+    overflow-y: scroll;
+}
+.kratosContent{
+    max-width: 990px;
+    margin-left: 250px;
+}
+
+.kratosActive{
+    color: "green";
+    background: #e2e2e2;
+}
+
+
+@media( max-width : 1085px){
+    .kratosMenu{
+        display: none;
+    }
+    
+    .kratosContent{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+

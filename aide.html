@@ -6,23 +6,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dist/bootstrap.min.css" />
     <link rel="stylesheet" href="./dist/myStyle.css" />
+    <link type="text/css" rel="stylesheet" href="./dist/t-scroll.min.css">
+    <script type="text/javascript">
+        Tu.tScroll({
+        't-element': '.zoomIn'
+        })
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1 class="display-4 text-center mb-3">Comment s'inscrire à <span class="text-primary">Masterkee</span>Group</h2>
+        <h1 class="display-4 text-center mb-3">Comment s'inscrire à <span class="text-primary">Masterkee</span> Group</h2>
             <h4 class="mb-4">Veuillez suivre les Etapes si dessous pour vous s'inscrire</h4>
-            <div class="row mt-3">
-                <div class="col-md-3">
+                <div class="kratosMenu zoomIn" data-t-show="1">
                     <h2 class="text-center">Les Etapes</h2>
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#prerequis"> <h3> Prérequis</a></h3></li>
-                        <li class="list-group-item" data-toggle="collapse" data-target="#collapse1" class="navbar-toggler">
-                            <h4>Etape 1</h4>
+                        <li class="list-group-item kratosItem kratosActive"><a href="#prerequis"> <h4> Prérequis</a></h4></li>
+                        <li class="list-group-item kratosItem box-center" data-toggle="collapse" data-target="#collapse1" class="navbar-toggler">
+                            <h4 > Etape 1</h4>
                             <div class="collapse" id="collapse1">
                                 <a class="nav-link" href="#etape1">s'inscrire</a>
                             </div>
                         </li>
-                        <li class="list-group-item" data-toggle="collapse" data-target="#collapse2" class="navbar-toggler">
+                        <li class="list-group-item kratosItem" data-toggle="collapse" data-target="#collapse2" class="navbar-toggler">
                             <h4>Etape 2</h4>
                             <div class="collapse" id="collapse2">
                                 <a class="nav-link" href="#code-inscription">Code Inscription</a>
@@ -34,28 +39,55 @@
                                 <a class="nav-link" href="#ville">ville</a>
                                 <a class="nav-link" href="#numero">numero</a>
                                 <a class="nav-link" href="#quartier">quartier</a>
+                                <a class="nav-link" href="#suivant">cliquez sur suivant</a>
                             </div>
                         </li>
+                        <li class="list-group-item kratosItem"><a href="#etape3"><h4> Etape 3</a></h4></li>
+                        <li class="list-group-item kratosItem zoomIn" data-t-show="2" data-toggle="collapse" data-target="#collapse4" class="navbar-toggler">
+                            <h4>Etape 4</h4>
+                            <div class="collapse" id="collapse4">
+                                <a class="nav-link" href="#memorisation">mémorisation</a>
+                                <a class="nav-link" href="#backoffice">allez au backoffice</a>
+                            </div>
+                        </li>
+                        <li class="list-group-item kratosItem" data-toggle="collapse" data-target="#collapse5" class="navbar-toggler">
+                            <h4>Etape 5</h4>
+                            <div class="collapse" id="collapse5">
+                                <a class="nav-link" href="#codeId">code Id</a>
+                                <a class="nav-link" href="#tel">numero de telephone</a>
+                                <a class="nav-link" href="#mdp">mot de passe</a>
+                                <a class="nav-link" href="#captcha">Systeme de captcha</a>
+                            </div>
+                        </li>
+                        <li class="list-group-item kratosItem"><a href="#etape6"><h4> Etape 6</a></h4></li>
                         
                     </ul>
                 </div>
-                <div class="col-md-9 p-2 mb-3">
+                <div class="kratosContent p-2 mb-3">
                     <div class="border-left border-danger p-2 jumbotron">
-                        <h2 id="prerequis" class="text-danger text-center">Préréquis</h2>
+                        <h2 id="prerequis" class="text-danger text-center">Prérequis</h2>
                         <p class="">Pour vous s'inscrire à MasterkeeGroup, vous devez payer une <span class="font-weight-bold">adhésion</span> de <span class="text-info">10 000 fcfa</span> via
-                        <span class="text-danger">Flooz</span>, <span class="text-danger">Tmoney, </span>ou 
-                        <span class="text-danger">Xpress</span> sur le <span class="font-weight-bold">numero: </span><span class="text-info font-weight-bold">numéro masterkeegroup</span></p>
+                        <div class="d-flex justify-content-around p-2">
+                            <div> 
+                                <img src="./img/flooz.jpg" width="100px" height="100px" class="rounded-circle mr-4" alt="flooz-image" />
+                                <span class="font-weight-bold">Flooz:  <span class="text-danger">96-64-10-25</span></span>
+                            </div>
+                            <div> 
+                                <img src="./img/tmoney.png" width="100px" height="100px" class="rounded-circle mr-4" alt="tmoney-image" />
+                                <span class="font-weight-bold">Tmoney:  <span class="text-danger">90-92-03-91</span></span>
+                            </div>
+                        </div></p>
                         <p class="">Une fois l'adhésion payée, vous aurez automatiquement un <span class="font-weight-bold">numéro d'inscription</span>, que vous aurez bésoins pour vous inscrire.</p>
                         <p class="mt-2">NB: <span class="font-weight-bold">Il est vivement conseillez d'utiliser son propre numéro pour l'envoie de l'argent.</span></p>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 zoomOut undefined t-animated t-default" style="animation-duration: 0.5s; opacity: 1;">
                         <h1 id="etape1" class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 1</h1>
-                        <img id="img1" class="mb-3" src="./img/img1.png" width="800px" alt="image 1">
-                        <p class="mt-2">* Cliquez sur le bouton s' <span class="text-primary">inscrire</span> en haut de la page, comme le montre l'image.</p>
+                        <img id="img1" class="mb-3 text-center" src="./img/img1.png" width="800px" alt="image 1">
+                        <p class="mt-2">Cliquez sur le bouton s' <span class="text-primary">inscrire</span> en haut de la page, comme le montre l'image.</p>
                     </div>
                     <div class="mb-3">
                         <h1 id="etape2" class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 2</h1>
-                        <img id="img2" class="mb-3" src="./img/img2.png" width="800px" alt="image 2">
+                        <img id="img2" class="mb-3 text-center" src="./img/img2.png" width="800px" alt="image 2">
                         <p class="mt-2" id="code-inscription">1- Cliquez dans le champ numéro <span class="text-primary">1</span>, puis entrez le <span class="text-success">code d'inscription</span> que vous avez reçus après l'envoie de votre argent</p>
                         <p class="mt-2" id="commissionnaire">2- En suite vous cliquez dans le champ numéro <span class="text-primary">2</span>, puis entrez le code de votre <span class="font-weight">commissionnaire (votre Parain )</span> </p>
                         <p class="mt-2" id="nom">3- Entrez votre <span class="text-success">Nom</span> de famille dans le champ numéro <span class="text-primary">3</span></p>
@@ -63,54 +95,56 @@
                         <p class="mt-2" id="email">5- Entrez votre <span class="text-success">Email</span> dans le champ numéro <span class="text-primary">5</span></p>
                         <p class="mt-2 jumbotron border-left border-primary">NB:  Assurez-vous d'avoir entrez une addresse <span class="font-weight-bold text-danger"> email valid </span>, car vos <span class="font-weight-bold"> informations de connexion</span>, vous seront envoyés dessus.</p>
                     
-                        <img id="img3" class="mb-3" src="./img/img3.png" width="800px" alt="image 3">
+                        <img id="img3" class="mb-3 text-center" src="./img/img3.png" width="800px" alt="image 3">
                         <p class="mt-2" id="pays">6- Continuez en sélectionnent votre <span class="text-success">Pays</span> dans le champ <span class="text-primary">6</span></p>
                         <p class="mt-2" id="ville">7- choisissez votre <span class="text-primary">ville</span></p>
                         <p class="mt-2" id="numero">8- Maintenant, entrez dans les champs <span class="text-primary">8</span> et <span class="text-primary"> 9</span> vos deux numeros de <span class="text-success">téléphone</span> (moov et Togocel) si vous en avez. Au cas contraire, entrez le meme numéro dans les deux champs</p>
-                        <p class="mt-2" id="quartier>9- Entrez le nom de votre <span class="text-success">quartier</span> dans le champ numéro <span class="text-primary">10</span></p>
-                        <p class="mt-2" id="email">10- Puis cliquez sur le bouton <span class="btn btn-primary text-white">Suivant -></span></p>
+                        <p class="mt-2" id="quartier">9- Entrez le nom de votre <span class="text-success">quartier</span> dans le champ numéro <span class="text-primary">10</span></p>
+                        <p class="mt-2" id="suivant">10- Puis cliquez sur le bouton <span class="btn btn-primary text-white">Suivant -></span></p>
                     </div>
                     <div class="mb-3">
                         <h1 id="etape3" class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 3</h1>
-                        <img id="img4" class="mb-3" src="./img/img4.png" width="800px" alt="image 4">
+                        <img id="img4" class="mb-3 text-center" src="./img/img4.png" width="800px" alt="image 4">
                         <p class="mt-2">- Arrivez sur cette page, vérifiez tous simplement si vos informations sont corrects. Si c'est le cas, vous continuez en cliquent sur le bouton <span class="btn btn-primary">valider</span></p>
-                        <p class="mt-2" > Au cas contraire, vous pouvez tout fois revenir en arrière pour corriger vos erreurs.</p>
+                        <p class="mt-2"> Au cas contraire, vous pouvez tout fois revenir en arrière pour corriger vos erreurs.</p>
                     </div>
                     <div class="mb-3">
-                        <h1 id="etape5" class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 4</h1>
+                        <h1 id="etape4" class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 4</h1>
                         <p class="mt-2">- Sur cette page, vous avez tous vos informations de connexion.(<span class="text-danger">code Id,numero de telephone,mot de passe)</span></p>
-                        <img id="img5" class="mb-3" src="./img/img5.png" width="800px" alt="image 5">
+                        <img id="img5" class="mb-3 text-center" src="./img/img5.png" width="800px" alt="image 5">
                         <p class="mt-2" id="memorisation" >1- Mémorisez ses informations, car ils vous servirons à vous <span class="font-weight-bold">connectez</span> à votre <span class="text-success">BackOffice(compte)</span></p>
                         <p class="mt-2 jumbotron border-left border-primary">NB: vous avez ses informations dans votre boite <span class="font-weight-bold">Mail</span> (l'addresse email que vous avez entrez dans le champ numero 5) <span class="text-muted">d'oû l'importance d'une adresse email valid.</span></p>
-                        <p class="mt-2">2- Une fois information Mémorisez , cliquez sur le boutton <span class="btn btn-primary">Acceder au BackOffice</span> (votre compte) </p>
+                        <p class="mt-2" id="backoffice">2- Une fois information Mémorisez , cliquez sur le boutton <span class="btn btn-primary">Acceder au BackOffice</span> (votre compte) </p>
                     </div>
                     <div class="mb-3">
-                        <h1 id="etape6" class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 5</h1>
+                        <h1 class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 5</h1>
                         <p class="mt-2">Cette page est la page de connexion à votre <span class="text-primary">BackOffice</span> (compte).</p>
-                        <img id="img6" class="mb-3" src="./img/img6.png" width="800px" alt="image 6">
+                        <img id="img6" class="mb-3 text-center" src="./img/img6.png" width="800px" alt="image 6">
                         <p class="mt-2" id="codeId">1- Entrez votre <span class="text-success">code ID</span> reçu après l'inscription</p>
                         <p class="mt-2 jumbotron mb-2">NB: si vous avez oubliez ses informations, vous pouvez tout fois allez les consulter dans votre boite Mail.</p>
-                        <p class="mt-2">2- Entrez votre <span class="text-success">numero de telephone</span> dans le champ 2</p>
-                        <p class="mt-2">3- Entrez votre <span class="text-success">mot de passe</span> dans le champ 3</p>
-                        <p class="mt-2 mb-2">4- Cliquez sur la petite <span class="text-success">case</span> dans le champ 4</p>
+                        <p class="mt-2" id="tel">2- Entrez votre <span class="text-success">numero de telephone</span> dans le champ 2</p>
+                        <p class="mt-2" id="mdp">3- Entrez votre <span class="text-success">mot de passe</span> dans le champ 3</p>
+                        <p class="mt-2 mb-2" id="captcha">4- Cliquez sur la petite <span class="text-success">case</span> dans le champ 4</p>
                         
-                        <img id="img7" class="mb-3" src="./img/img7.png" width="800px" alt="image 6">
+                        <img id="img7" class="mb-3 text-center" src="./img/img7.png" width="800px" alt="image 6">
                         <p class="mt-2">5- une fois la petite case cochez, vous aurez une petite fenètre comme le montre la photo ci-dessus.</p>
-                        <p class="mt-2">repondez au question posez en cochant les cases correspondantes</p>
+                        <p class="mt-2" id="reponse">repondez au question posez en cochant les cases correspondantes</p>
                         <p class="mt-2 mb-2">Ensuite cliquez sur le boutton <span class="btn btn-primary">Valider</span></p>
-                        <img id="img8" class="mb-3" src="./img/img8.png" width="800px" alt="image 6">
+                        <img id="img8" class="mb-3 text-center" src="./img/img8.png" width="800px" alt="image 6">
                         <p class="mt-2 mb-2">Ensuite cliquez tous simplement sur le bouton <span class="btn btn-primary">Se connecter</span></p>
                         
                     </div>
                     <div class="mb-3">
                         <h1 id="etape6" class="text-primary p-2 border-left bg-light border-primary mb-2">Etape 6</h1>
                         <p class="mt-2 mb-2">Maintenant vous ête <span class="font-weight-bold"> connectez</span> à votre backoffice(compte)</p>
-                        <img id="img9" class="mb-3" src="./img/img9.png" width="800px" alt="image 6">
+                        <img id="img9" class="mb-3 text-center" src="./img/img9.png" width="800px" alt="image 6">
 
                     </div>
                 </div>
     </div>
       <script src="./dist/jquery.js"></script>
       <script src="./dist/bootstrap.bundle.min.js"></script>
+      <script src="./dist/myScript.js"></script>
+      <script src="./dist/t-scroll.min.js"></script>
 </body>
 </html>
